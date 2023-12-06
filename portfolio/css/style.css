@@ -1,0 +1,264 @@
+@import url('https://fonts.googleapis.com/css?family=Nunito+Round&display=swap');
+
+
+:root {
+    --main-color: #28aae3;
+}
+
+
+* {
+    font-family: 'Nunito Round', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: all .2s linear;
+    line-height: 1.5;
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #fcf2e8;
+    padding-left: 46rem;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    background: #222;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+    flex-flow: column;
+    padding: 8rem 2rem;
+    width: 40rem;
+    text-align: center;
+}
+
+header .logo {
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 3rem;
+    font-weight: bolder;
+}
+
+header .logo span {
+    text-transform: uppercase;
+    color: var(--main-color);
+}
+
+.about {
+    display: block;
+    font-size: 2rem;
+    color: #fff;
+    margin: 2rem 0;
+}
+
+.about:hover {
+    color: var(--main-color);
+}
+
+header .follow a {
+    color: #fff;
+    font-size: 3rem;
+    letter-spacing: .9rem;
+}
+
+    header .follow a:hover {
+        color: var(--main-color);
+    }
+
+#menu-bars {
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    z-index: 10000;
+    background: var(--main-color);
+    color: #fff;
+    border-radius: .5rem;
+    padding: 1rem 1.5rem;
+    font-size: 3rem;
+    cursor: pointer;
+    display: none;
+}
+
+
+.portfolio {
+    padding: 5rem 5rem 5rem;
+}
+
+@media (min-width:991px) {
+
+    .portfolio .box-container .box {
+        width: 30rem;
+        height: 25rem;
+        position: relative;
+        overflow: hidden;
+        border: .5rem solid #fff;
+        box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+    }
+}
+
+
+@media (max-width:991px) {
+    html {
+        font-size: 55%;
+    }
+
+    body {
+        padding: 0;
+    }
+
+    #menu-bars {
+        display: initial;
+    }
+
+    header {
+        left: -120%;
+    }
+
+        header.active {
+            left: 0%;
+        }
+
+    .portfolio .box-container .box {
+        width: 30rem;
+        height: 25rem;
+        position: relative;
+        overflow: hidden;
+        border: .5rem solid #fff;
+        box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+    }
+}
+
+
+@media (max-width:450px) {
+    html {
+        font-size: 50%;
+    }
+
+    header {
+        width: 100%;
+    }
+
+
+
+    .portfolio .box-container .box {
+        width: 35rem;
+        height: 35rem;
+        position: relative;
+        overflow: hidden;
+        border: .5rem solid #fff;
+        box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+    }
+}
+
+
+
+.portfolio .box-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+
+    .portfolio .box-container .box:hover {
+        overflow: initial;
+        border: 1rem solid #eee;
+    }
+
+    .portfolio .box-container .box img {
+        height: 85%;
+        width: 100%;
+        object-fit: cover;
+        border-radius: .5rem;
+        /*position: relative;
+z-index: 1;*/
+    }
+
+        .portfolio .box-container .box img:hover {
+            border-radius: 0rem;
+        }
+
+    .portfolio .box-container .box .appNameL {
+        text-align: center;
+        font-family: 'Nunito Round', sans-serif;
+        font-size: 2.5rem;
+        color: #2C2C2C;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
+    }
+    
+    .portfolio .box-container .box .appNameS {
+        text-align: center;
+        font-family: 'Nunito Round', sans-serif;
+        font-size: 2rem;
+        color: #2C2C2C;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
+    }
+
+    .portfolio .box-container .box .icons {
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+    }
+
+.logoresim {
+    display: block;
+    height: 25rem;
+    width: 25rem;
+    border-radius: 50rem;
+    color: #333;
+    text-align: center;
+    border: .5rem solid #fff;
+}
+
+    .logoresim:hover {
+        height: 26rem;
+        width: 26rem;
+        border: .3rem solid #fff;
+    }
+
+.portfolio .box-container .box .icons img {
+    display: block;
+    height: 4rem;
+    width: 4rem;
+    border-radius: 5rem;
+    color: #333;
+    font-size: 1.7rem;
+    line-height: 4rem;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+    .portfolio .box-container .box .icons img:hover {
+        cursor: pointer;
+        height: 5rem;
+        width: 5rem;
+    }
+
+.heading {
+    font-size: 4rem;
+    padding-bottom: 1rem;
+    color: #111;
+    text-transform: uppercase;
+}
+
+    .heading span {
+        color: var(--main-color);
+        text-transform: uppercase;
+    }
+
+.content {
+    flex: 1 1 10rem;
+}
